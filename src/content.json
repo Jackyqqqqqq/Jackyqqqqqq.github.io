@@ -1,0 +1,360 @@
+{
+  "monogram": "QYZ",
+  "email": "qinyizhen8@gmail.com",
+  "model": "models/profile-character.glb",
+  "images": {
+    "about": "images/avatar-portrait.png",
+    "contact": "images/avatar-landscape.png"
+  },
+  "socials": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/Jackyqqqqqq"
+    }
+  ],
+  "theme": {
+    "accent": "#da7756",
+    "accentAlt": "#6f8f7d",
+    "paper": "#f5f3ee",
+    "ink": "#1d1b16",
+    "night": "#141210"
+  },
+  "copy": {
+    "zh": {
+      "name": "秦翊祯",
+      "role": "浙江大学软件学院 · 2026 级软件工程",
+      "headline": "从网络安全出发，持续探索软件工程与人工智能。",
+      "intro": "浙江大学软件学院 2026 级软件工程新生。\n本科毕业于武汉大学国家网络安全学院，关注深度学习、可信软件与隐私保护。",
+      "location": "中国杭州",
+      "availability": "2026 · 软件工程新生",
+      "about": {
+        "eyebrow": "关于我",
+        "title": "把安全背景带进软件工程，把工程能力带回研究问题。",
+        "body": "我关注人工智能、软件工程与网络安全的交叉方向，喜欢从论文和真实数据出发提出假设，再用实验和代码验证方法边界。接下来将在浙江大学软件学院继续学习软件工程，探索可信、智能且可维护的软件系统。"
+      },
+      "sections": {
+        "education": {
+          "label": "教育经历",
+          "title": "从武汉到杭州，把安全基础带进软件工程。"
+        },
+        "projects": {
+          "label": "研究与项目",
+          "title": "把方法拆成流程，让每一步都可以验证。",
+          "intro": "围绕生成内容检测、信息隐藏与计算机视觉，持续把论文方法转化为可复现的工程实验。"
+        },
+        "contact": {
+          "label": "保持联系",
+          "title": "一起讨论值得认真验证的问题。",
+          "note": "欢迎交流软件工程、人工智能与网络安全方向的问题。"
+        }
+      },
+      "education": [
+        {
+          "institution": "浙江大学",
+          "school": "软件学院",
+          "degree": "软件工程 · 硕士研究生",
+          "period": "2026.09 起",
+          "detailLabel": "身份",
+          "detail": "2026 级软件工程新生",
+          "image": ""
+        },
+        {
+          "institution": "武汉大学",
+          "school": "国家网络安全学院",
+          "degree": "网络空间安全 · 本科",
+          "period": "2022.09 - 2026.06",
+          "detailLabel": "毕业论文",
+          "detail": "《车载网络安全加密技术验证与测试》",
+          "image": ""
+        }
+      ],
+      "stats": [
+        {
+          "value": "ZJU",
+          "label": "2026 级软件工程硕士"
+        },
+        {
+          "value": "WHU",
+          "label": "网络空间安全本科"
+        },
+        {
+          "value": "AI × SE",
+          "label": "人工智能与软件工程"
+        }
+      ],
+      "skills": [
+        "Python",
+        "C++",
+        "SQL",
+        "深度学习",
+        "自然语言处理",
+        "生成内容检测",
+        "信息隐藏",
+        "隐私保护"
+      ],
+      "projects": [
+        {
+          "title": "生成文本检测评估",
+          "category": "FastDetectGPT / 项目负责人",
+          "year": "2024.09 - 2024.12",
+          "description": "基于 GPT-2 XL 与条件概率曲率检测，对比蒙特卡洛采样和解析近似，并自动评估不同采样策略下约 20,000 个样本。",
+          "image": "images/avatar-landscape.png",
+          "tags": [
+            "Python",
+            "NLP",
+            "Evaluation"
+          ],
+          "flow": [
+            {
+              "label": "数据构建",
+              "image": "images/avatar-landscape.png"
+            },
+            {
+              "label": "多策略采样",
+              "image": ""
+            },
+            {
+              "label": "曲率检测",
+              "image": ""
+            },
+            {
+              "label": "指标评估",
+              "image": ""
+            }
+          ],
+          "href": "https://github.com/Jackyqqqqqq"
+        },
+        {
+          "title": "HiNet 图像隐写研究",
+          "category": "可逆神经网络 / 项目负责人",
+          "year": "2025.01 - 2025.06",
+          "description": "复现高容量图像隐写与恢复方法，并加入 DataEncoder 与 DataDecoder，将能力拓展到二进制数据的隐私传输。",
+          "image": "",
+          "tags": [
+            "Deep Learning",
+            "Steganography",
+            "Privacy"
+          ],
+          "flow": [
+            {
+              "label": "秘密数据编码",
+              "image": ""
+            },
+            {
+              "label": "可逆网络隐写",
+              "image": ""
+            },
+            {
+              "label": "图像传输",
+              "image": ""
+            },
+            {
+              "label": "信息解码",
+              "image": ""
+            }
+          ],
+          "href": "https://github.com/Jackyqqqqqq"
+        },
+        {
+          "title": "半监督花卉图像分类",
+          "category": "ResNet18 / 半监督学习",
+          "year": "AI PRACTICE",
+          "description": "基于 Oxford-102 数据集和迁移学习构建半监督分类流程，结合有标签与无标签图像提升验证准确率和训练稳定性。",
+          "image": "",
+          "tags": [
+            "PyTorch",
+            "Computer Vision",
+            "Semi-supervised"
+          ],
+          "flow": [
+            {
+              "label": "数据划分",
+              "image": ""
+            },
+            {
+              "label": "ResNet18 预训练",
+              "image": ""
+            },
+            {
+              "label": "伪标签迭代",
+              "image": ""
+            },
+            {
+              "label": "验证评估",
+              "image": ""
+            }
+          ],
+          "href": "https://github.com/Jackyqqqqqq"
+        }
+      ]
+    },
+    "en": {
+      "name": "Qin Yizhen",
+      "role": "Software Engineering, Zhejiang University · Class of 2026",
+      "headline": "Starting from cyber security, moving into software engineering and AI.",
+      "intro": "Incoming software engineering graduate student at the School of Software Technology, Zhejiang University.\nBSc from the School of Cyber Science and Engineering, Wuhan University, working on deep learning, trustworthy software and privacy.",
+      "location": "Hangzhou, China",
+      "availability": "2026 · Incoming graduate student",
+      "about": {
+        "eyebrow": "About me",
+        "title": "Bringing a security background into software engineering, and engineering rigour back into research.",
+        "body": "I work where artificial intelligence, software engineering and cyber security overlap. I like starting from papers and real data, forming a hypothesis, then using experiments and code to find where a method actually breaks. Next I continue in software engineering at Zhejiang University, building software systems that are trustworthy, intelligent and maintainable."
+      },
+      "sections": {
+        "education": {
+          "label": "Education",
+          "title": "From Wuhan to Hangzhou, carrying security fundamentals into software engineering."
+        },
+        "projects": {
+          "label": "Research & work",
+          "title": "Break a method into steps, so every step can be verified.",
+          "intro": "Around generated-content detection, information hiding and computer vision — turning published methods into reproducible engineering experiments."
+        },
+        "contact": {
+          "label": "Keep in touch",
+          "title": "Let's talk about problems worth verifying properly.",
+          "note": "Happy to discuss software engineering, artificial intelligence and cyber security."
+        }
+      },
+      "education": [
+        {
+          "institution": "Zhejiang University",
+          "school": "School of Software Technology",
+          "degree": "Software Engineering · MSc",
+          "period": "From 2026.09",
+          "detailLabel": "Status",
+          "detail": "Incoming graduate student, class of 2026",
+          "image": ""
+        },
+        {
+          "institution": "Wuhan University",
+          "school": "School of Cyber Science and Engineering",
+          "degree": "Cyberspace Security · BSc",
+          "period": "2022.09 - 2026.06",
+          "detailLabel": "Thesis",
+          "detail": "Verification and Testing of Encryption for In-Vehicle Networks",
+          "image": ""
+        }
+      ],
+      "stats": [
+        {
+          "value": "ZJU",
+          "label": "MSc Software Engineering, 2026"
+        },
+        {
+          "value": "WHU",
+          "label": "BSc Cyberspace Security"
+        },
+        {
+          "value": "AI × SE",
+          "label": "AI and software engineering"
+        }
+      ],
+      "skills": [
+        "Python",
+        "C++",
+        "SQL",
+        "Deep learning",
+        "NLP",
+        "Generated-text detection",
+        "Information hiding",
+        "Privacy"
+      ],
+      "projects": [
+        {
+          "title": "Generated-text detection study",
+          "category": "FastDetectGPT / project lead",
+          "year": "2024.09 - 2024.12",
+          "description": "Curvature-based detection with GPT-2 XL conditional probabilities, comparing Monte Carlo sampling against the analytic approximation across roughly 20,000 samples under different sampling strategies.",
+          "image": "images/avatar-landscape.png",
+          "tags": [
+            "Python",
+            "NLP",
+            "Evaluation"
+          ],
+          "flow": [
+            {
+              "label": "Dataset build",
+              "image": ""
+            },
+            {
+              "label": "Multi-strategy sampling",
+              "image": ""
+            },
+            {
+              "label": "Curvature detection",
+              "image": ""
+            },
+            {
+              "label": "Metric evaluation",
+              "image": ""
+            }
+          ],
+          "href": "https://github.com/Jackyqqqqqq"
+        },
+        {
+          "title": "HiNet image steganography",
+          "category": "Invertible neural network / project lead",
+          "year": "2025.01 - 2025.06",
+          "description": "Reproduced high-capacity image hiding and recovery, then added a DataEncoder and DataDecoder to extend it from images to private transmission of binary payloads.",
+          "image": "",
+          "tags": [
+            "Deep Learning",
+            "Steganography",
+            "Privacy"
+          ],
+          "flow": [
+            {
+              "label": "Payload encoding",
+              "image": ""
+            },
+            {
+              "label": "Invertible hiding",
+              "image": ""
+            },
+            {
+              "label": "Image transfer",
+              "image": ""
+            },
+            {
+              "label": "Payload decoding",
+              "image": ""
+            }
+          ],
+          "href": "https://github.com/Jackyqqqqqq"
+        },
+        {
+          "title": "Semi-supervised flower classification",
+          "category": "ResNet18 / semi-supervised learning",
+          "year": "AI PRACTICE",
+          "description": "A semi-supervised pipeline on Oxford-102 with transfer learning, combining labelled and unlabelled images to raise validation accuracy and training stability.",
+          "image": "",
+          "tags": [
+            "PyTorch",
+            "Computer Vision",
+            "Semi-supervised"
+          ],
+          "flow": [
+            {
+              "label": "Data split",
+              "image": ""
+            },
+            {
+              "label": "ResNet18 pre-training",
+              "image": ""
+            },
+            {
+              "label": "Pseudo-label rounds",
+              "image": ""
+            },
+            {
+              "label": "Validation",
+              "image": ""
+            }
+          ],
+          "href": "https://github.com/Jackyqqqqqq"
+        }
+      ]
+    }
+  }
+}

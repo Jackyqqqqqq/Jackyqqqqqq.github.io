@@ -1,0 +1,33 @@
+🔑 获取 fal.ai API Key 步骤
+================================
+
+1. 打开浏览器访问: https://fal.ai
+
+2. 点击右上角 "Sign Up" 或 "Get Started"
+   - 用邮箱注册（Gmail/QQ 邮箱都可以）
+   - 或直接用 GitHub/Google 账号登录
+
+3. 注册后会送 $1 免费额度（够生成 2-3 次 3D 模型）
+
+4. 进入 Dashboard: https://fal.ai/dashboard/keys
+
+5. 点击 "Create API Key"，复制生成的 key（格式类似: fal_abc123...）
+
+6. 把 Key 告诉我，或者自己运行：
+
+   Windows CMD:
+   set FAL_KEY=你的key
+   python tools/gen_3d_avatar.py
+
+   Windows PowerShell:
+   $env:FAL_KEY="你的key"
+   python tools/gen_3d_avatar.py
+
+---
+
+或者，如果你希望我帮你完成整个流程，请：
+1. 注册完成后
+2. 把 API Key 发给我（格式: fal_xxxxx）
+3. 我会直接运行脚本生成高质量 3D 模型
+
+整个注册过程不超过 2 分钟，无需信用卡 ✅
