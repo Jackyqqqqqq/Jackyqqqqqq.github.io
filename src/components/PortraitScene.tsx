@@ -247,8 +247,8 @@ export function PortraitScene(props: SceneProps) {
     <Canvas
       className="portrait-canvas"
       camera={{ position: [0, 0, CAMERA_BASE_Z], fov: desktopPath[0].fov, near: 0.1, far: 100 }}
-      dpr={[1, props.compact ? 1.4 : 1.75]}
-      gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
+      dpr={[1, props.compact ? 1 : 1.25]}
+      gl={{ alpha: true, antialias: !props.compact, powerPreference: "high-performance", stencil: false, depth: true }}
       fallback={<div className="canvas-fallback" />}
     >
       <Suspense fallback={null}>

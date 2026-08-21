@@ -158,6 +158,10 @@ export default function App() {
   useScrollProgress();
   const localTime = useClock(t.lang);
   const onModelLoaded = useCallback(() => setModelLoaded(true), []);
+  useEffect(() => {
+    const timer = window.setTimeout(() => setModelLoaded(true), 8000);
+    return () => window.clearTimeout(timer);
+  }, []);
   const navRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLElement>(null);
   const [switching, setSwitching] = useState(false);
