@@ -35,6 +35,14 @@ test("renders the public academic record without private resume fields", () => {
   expect(screen.getByRole("heading", { name: "Contact" })).toBeVisible();
   expect(screen.getByText("Wuhan University")).toBeVisible();
   expect(screen.getByText(/Verification and Testing of Encryption for In-Vehicle Networks/)).toBeVisible();
+  expect(screen.getByRole("img", { name: "Zhejiang University emblem" })).toHaveAttribute(
+    "src",
+    "/university-logos/zhejiang-university.svg"
+  );
+  expect(screen.getByRole("img", { name: "Wuhan University emblem" })).toHaveAttribute(
+    "src",
+    "/university-logos/wuhan-university.svg"
+  );
   expect(container.textContent).not.toMatch(/\b1[3-9]\d{9}\b/);
   expect(container.textContent).not.toMatch(
     /\b(?:19|20)\d{2}[./-](?:0[1-9]|1[0-2])[./-](?:0[1-9]|[12]\d|3[01])\b/

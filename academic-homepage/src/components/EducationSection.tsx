@@ -14,17 +14,28 @@ export default function EducationSection({ locale }: EducationSectionProps) {
         {siteContent.education.map((entry) => (
           <li key={`${entry.institution.en}-${entry.period}`}>
             <article>
-              <div className="education-heading">
-                <h3>{pick(entry.institution, locale)}</h3>
-                <time>{entry.period}</time>
+              <div className="education-logo-frame">
+                <img
+                  alt={pick(entry.logoAlt, locale)}
+                  className="education-logo"
+                  height="44"
+                  src={entry.logo}
+                  width="44"
+                />
               </div>
-              <p>{pick(entry.school, locale)}</p>
-              <p>{pick(entry.degree, locale)}</p>
-              <ul>
-                {entry.details.map((detail) => (
-                  <li key={detail.en}>{pick(detail, locale)}</li>
-                ))}
-              </ul>
+              <div className="education-body">
+                <div className="education-heading">
+                  <h3>{pick(entry.institution, locale)}</h3>
+                  <time>{entry.period}</time>
+                </div>
+                <p>{pick(entry.school, locale)}</p>
+                <p>{pick(entry.degree, locale)}</p>
+                <ul>
+                  {entry.details.map((detail) => (
+                    <li key={detail.en}>{pick(detail, locale)}</li>
+                  ))}
+                </ul>
+              </div>
             </article>
           </li>
         ))}

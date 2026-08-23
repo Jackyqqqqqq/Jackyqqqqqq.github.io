@@ -32,7 +32,7 @@ export interface SiteContent {
   about: LocalizedText[];
   research: Array<{ title: LocalizedText; description: LocalizedText }>;
   projects: ProjectContent[];
-  education: Array<{ institution: LocalizedText; school: LocalizedText; degree: LocalizedText; period: string; details: LocalizedText[] }>;
+  education: Array<{ institution: LocalizedText; school: LocalizedText; degree: LocalizedText; period: string; logo: string; logoAlt: LocalizedText; details: LocalizedText[] }>;
   skills: Array<{ label: LocalizedText; items: string[] }>;
   ui: SiteUiContent;
 }

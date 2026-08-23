@@ -797,21 +797,51 @@ button {
   border-bottom: 1px solid var(--line);
 }
 
-.education-list article > p {
+.education-list article {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: start;
+  gap: 17px;
+}
+
+.education-logo-frame {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--ink) 7%, transparent);
+}
+
+.education-logo {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.education-body {
+  min-width: 0;
+}
+
+.education-body > p {
   margin: 5px 0 0;
   color: var(--muted);
   font-size: 0.8125rem;
   line-height: 1.65;
 }
 
-.education-list article > ul {
+.education-body > ul {
   margin: 12px 0 0;
   padding-left: 18px;
   color: var(--ink);
   font-size: 0.8125rem;
 }
 
-.education-list article > ul li + li {
+.education-body > ul li + li {
   margin-top: 4px;
 }
 
@@ -1091,6 +1121,22 @@ button {
   .education-heading {
     grid-template-columns: minmax(0, 1fr);
     gap: 4px;
+  }
+
+  .education-list article {
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .education-logo-frame {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+  }
+
+  .education-logo {
+    width: 38px;
+    height: 38px;
   }
 
   .project-details {
