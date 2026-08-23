@@ -25,16 +25,22 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: academic-homepage/package-lock.json
       - name: Install dependencies
         run: npm ci
+        working-directory: academic-homepage
+      - name: Test
+        run: npm test
+        working-directory: academic-homepage
       - name: Build
         run: npm run build
+        working-directory: academic-homepage
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: academic-homepage/dist
 
   deploy:
     environment:
