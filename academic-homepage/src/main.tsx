@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { siteContent } from "./content";
 import { assertValidContent } from "./content.validation";
+import "@fontsource-variable/noto-serif-sc";
 import "./styles.css";
 
 assertValidContent(siteContent);

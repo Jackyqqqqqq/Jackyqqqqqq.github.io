@@ -11,6 +11,19 @@ export interface SiteUiContent {
   github: LocalizedText;
   menu: LocalizedText;
   skipToContent: LocalizedText;
+  displaySettings: LocalizedText;
+  appearance: LocalizedText;
+  appearanceAuto: LocalizedText;
+  appearanceBright: LocalizedText;
+  appearanceSoft: LocalizedText;
+  appearanceDark: LocalizedText;
+  accentColor: LocalizedText;
+  accentNavy: LocalizedText;
+  accentForest: LocalizedText;
+  accentBurgundy: LocalizedText;
+  accentViolet: LocalizedText;
+  fontSize: LocalizedText;
+  resetDisplay: LocalizedText;
 }
 export interface SiteContent {
   identity: { name: LocalizedText; role: LocalizedText; location: LocalizedText };

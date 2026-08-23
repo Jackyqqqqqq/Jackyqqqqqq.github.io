@@ -9,7 +9,20 @@ const REQUIRED_UI_KEYS: Array<keyof SiteContent["ui"]> = [
   "email",
   "github",
   "menu",
-  "skipToContent"
+  "skipToContent",
+  "displaySettings",
+  "appearance",
+  "appearanceAuto",
+  "appearanceBright",
+  "appearanceSoft",
+  "appearanceDark",
+  "accentColor",
+  "accentNavy",
+  "accentForest",
+  "accentBurgundy",
+  "accentViolet",
+  "fontSize",
+  "resetDisplay"
 ];
 
 function isHttpsUrl(value: string): boolean {

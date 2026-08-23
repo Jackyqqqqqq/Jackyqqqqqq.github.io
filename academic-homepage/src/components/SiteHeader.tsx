@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DisplaySettings from "./DisplaySettings";
 import { siteContent } from "../content";
 import type { Locale } from "../content.types";
 import { pick } from "../i18n";
@@ -23,7 +24,7 @@ export default function SiteHeader({
       </a>
       <div className="site-header-inner">
         <a className="site-mark" href="#about" aria-label={pick(siteContent.identity.name, locale)}>
-          QY
+          QYZ
         </a>
 
         <nav aria-label="Primary">
@@ -52,21 +53,24 @@ export default function SiteHeader({
           </ul>
         </nav>
 
-        <div className="locale-switch" aria-label="Language">
-          <button
-            type="button"
-            aria-pressed={locale === "zh"}
-            onClick={() => onLocaleChange("zh")}
-          >
-            中文
-          </button>
-          <button
-            type="button"
-            aria-pressed={locale === "en"}
-            onClick={() => onLocaleChange("en")}
-          >
-            English
-          </button>
+        <div className="site-controls">
+          <div className="locale-switch" aria-label="Language">
+            <button
+              type="button"
+              aria-pressed={locale === "zh"}
+              onClick={() => onLocaleChange("zh")}
+            >
+              中文
+            </button>
+            <button
+              type="button"
+              aria-pressed={locale === "en"}
+              onClick={() => onLocaleChange("en")}
+            >
+              English
+            </button>
+          </div>
+          <DisplaySettings locale={locale} />
         </div>
       </div>
     </header>

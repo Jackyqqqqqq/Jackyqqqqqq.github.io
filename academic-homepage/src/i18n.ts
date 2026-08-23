@@ -11,9 +11,9 @@ export function pick(text: LocalizedText, locale: Locale): string {
 export function readStoredLocale(): Locale {
   try {
     const storedLocale = window.localStorage.getItem(STORAGE_KEY);
-    return storedLocale === "en" || storedLocale === "zh" ? storedLocale : "zh";
+    return storedLocale === "en" || storedLocale === "zh" ? storedLocale : "en";
   } catch {
-    return "zh";
+    return "en";
   }
 }
 

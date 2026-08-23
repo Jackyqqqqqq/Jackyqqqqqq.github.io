@@ -30,13 +30,13 @@ describe("locale preferences", () => {
     vi.restoreAllMocks();
   });
 
-  test("uses Chinese when no valid preference has been saved", () => {
-    expect(readStoredLocale()).toBe("zh");
+  test("uses English when no valid preference has been saved", () => {
+    expect(readStoredLocale()).toBe("en");
 
     render(<LocaleHarness />);
 
-    expect(screen.getByText("中文内容")).toBeVisible();
-    expect(document.documentElement.lang).toBe("zh");
+    expect(screen.getByText("English content")).toBeVisible();
+    expect(document.documentElement.lang).toBe("en");
   });
 
   test("restores a saved English preference and updates page metadata", () => {
@@ -64,13 +64,13 @@ describe("locale preferences", () => {
     expect(localStorage.getItem(STORAGE_KEY)).toBe("en");
   });
 
-  test("falls back to Chinese when browser storage access is denied", () => {
+  test("falls back to English when browser storage access is denied", () => {
     vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => {
       throw new DOMException("Access denied", "SecurityError");
     });
 
     expect(() => render(<LocaleHarness />)).not.toThrow();
-    expect(screen.getByText("中文内容")).toBeVisible();
-    expect(document.documentElement.lang).toBe("zh");
+    expect(screen.getByText("English content")).toBeVisible();
+    expect(document.documentElement.lang).toBe("en");
   });
 });

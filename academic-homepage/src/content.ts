@@ -30,5 +30,28 @@ export const siteContent: SiteContent = {
     { label: { zh: "机器学习", en: "Machine Learning" }, items: ["Deep Learning", "NLP", "Computer Vision", "ResNet18"] },
     { label: { zh: "安全与数据", en: "Security and Data" }, items: ["Information Hiding", "Content Security", "Databases"] }
   ],
-  ui: { expand: { zh: "展开详情", en: "Show details" }, collapse: { zh: "收起详情", en: "Hide details" }, method: { zh: "方法", en: "Method" }, result: { zh: "结果", en: "Result" }, repository: { zh: "项目仓库", en: "Repository" }, email: { zh: "邮箱", en: "Email" }, github: { zh: "GitHub", en: "GitHub" }, menu: { zh: "菜单", en: "Menu" }, skipToContent: { zh: "跳到主要内容", en: "Skip to content" } }
+  ui: {
+    expand: { zh: "展开详情", en: "Show details" },
+    collapse: { zh: "收起详情", en: "Hide details" },
+    method: { zh: "方法", en: "Method" },
+    result: { zh: "结果", en: "Result" },
+    repository: { zh: "项目仓库", en: "Repository" },
+    email: { zh: "邮箱", en: "Email" },
+    github: { zh: "GitHub", en: "GitHub" },
+    menu: { zh: "菜单", en: "Menu" },
+    skipToContent: { zh: "跳到主要内容", en: "Skip to content" },
+    displaySettings: { zh: "显示设置", en: "Display settings" },
+    appearance: { zh: "外观", en: "Appearance" },
+    appearanceAuto: { zh: "自动", en: "Auto" },
+    appearanceBright: { zh: "明亮", en: "Bright" },
+    appearanceSoft: { zh: "柔和", en: "Soft" },
+    appearanceDark: { zh: "深色", en: "Dark" },
+    accentColor: { zh: "主题色", en: "Accent color" },
+    accentNavy: { zh: "藏青", en: "Navy" },
+    accentForest: { zh: "墨绿", en: "Forest" },
+    accentBurgundy: { zh: "酒红", en: "Burgundy" },
+    accentViolet: { zh: "紫灰", en: "Violet grey" },
+    fontSize: { zh: "字体大小", en: "Font size" },
+    resetDisplay: { zh: "恢复默认", en: "Reset to default" }
+  }
 };
