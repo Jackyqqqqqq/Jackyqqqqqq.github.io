@@ -8,6 +8,7 @@ import SiteFooter from "./components/SiteFooter";
 import SkillsSection from "./components/SkillsSection";
 import { siteContent } from "./content";
 import { useActiveSection } from "./hooks/useActiveSection";
+import { useSectionReveal } from "./hooks/useSectionReveal";
 import { useLocale } from "./i18n";
 
 const SECTION_IDS = siteContent.navigation.map(({ id }) => id);
@@ -15,6 +16,7 @@ const SECTION_IDS = siteContent.navigation.map(({ id }) => id);
 export default function App() {
   const { locale, setLocale } = useLocale();
   const activeSection = useActiveSection(SECTION_IDS);
+  useSectionReveal();
 
   return (
     <>
