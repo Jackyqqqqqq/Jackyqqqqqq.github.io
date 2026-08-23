@@ -22,7 +22,7 @@
   --font-scale: 1;
   --serif: "Noto Serif SC Variable", Georgia, "Songti SC", serif;
   --sans: Arial, "Microsoft YaHei", sans-serif;
-  --page-width: 980px;
+  --page-width: 1120px;
   --radius: 3px;
   font-family: var(--sans);
   color: var(--ink);
@@ -509,7 +509,7 @@ button {
 
 .page-grid {
   display: grid;
-  grid-template-columns: 166px minmax(0, 1fr);
+  grid-template-columns: 224px minmax(0, 1fr);
   gap: 64px;
   align-items: start;
 }
@@ -806,21 +806,17 @@ button {
 
 .education-logo-frame {
   display: grid;
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   place-items: center;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--surface);
-  box-shadow: 0 8px 22px color-mix(in srgb, var(--ink) 7%, transparent);
 }
 
 .education-logo {
   display: block;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
+  filter: drop-shadow(0 2px 3px color-mix(in srgb, var(--ink) 12%, transparent));
 }
 
 .education-body {
@@ -874,7 +870,7 @@ button {
 .site-footer {
   width: min(calc(100% - 48px), var(--page-width));
   margin: 0 auto;
-  padding: 32px 0 48px 230px;
+  padding: 32px 0 48px 288px;
   border-top: 1px solid var(--line-strong);
   scroll-margin-top: 92px;
 }
@@ -951,6 +947,17 @@ button {
     --header-bg: rgb(22 27 30 / 0.94);
     --hover-tint: color-mix(in srgb, var(--accent-light) 7%, transparent);
     --panel-shadow: 0 22px 54px rgb(4 9 11 / 0.44);
+  }
+}
+
+@media (max-width: 960px) {
+  .page-grid {
+    grid-template-columns: 186px minmax(0, 1fr);
+    gap: 44px;
+  }
+
+  .site-footer {
+    padding-left: 230px;
   }
 }
 
@@ -1131,12 +1138,11 @@ button {
   .education-logo-frame {
     width: 46px;
     height: 46px;
-    border-radius: 10px;
   }
 
   .education-logo {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
   }
 
   .project-details {
