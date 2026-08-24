@@ -14,6 +14,7 @@ export default function ResearchInterests({ locale }: ResearchInterestsProps) {
         {siteContent.research.map((interest) => (
           <li key={interest.title.en}>
             <h3>{pick(interest.title, locale)}</h3>
+            <span className="research-leader" aria-hidden="true" />
             <p>{pick(interest.description, locale)}</p>
           </li>
         ))}

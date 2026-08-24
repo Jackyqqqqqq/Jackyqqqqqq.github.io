@@ -14,7 +14,7 @@ export default function SkillsSection({ locale }: SkillsSectionProps) {
         {siteContent.skills.map((group) => (
           <div key={group.label.en}>
             <dt>{pick(group.label, locale)}</dt>
-            <dd>{group.items.join(", ")}</dd>
+            <dd>{group.items.join(" · ")}</dd>
           </div>
         ))}
       </dl>
