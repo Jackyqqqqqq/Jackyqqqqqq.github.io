@@ -1523,7 +1523,12 @@ button {
   background: var(--surface-raised);
   box-shadow: var(--panel-shadow);
   transform: translateX(-50%);
-  animation: settings-in 180ms cubic-bezier(0.2, 0.72, 0.2, 1) both;
+  animation: contact-popover-in 180ms cubic-bezier(0.2, 0.72, 0.2, 1) both;
+}
+
+@keyframes contact-popover-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .contact-popover::after {
@@ -1862,10 +1867,19 @@ button {
     gap: 5px;
   }
 
-  .contact-channels {
+  .site-footer .contact-channels {
     display: flex;
     flex-direction: row;
     gap: 12px;
+  }
+
+  .contact-channel:nth-child(-n + 2) .contact-popover {
+    left: 0;
+    transform: none;
+  }
+
+  .contact-channel:nth-child(-n + 2) .contact-popover::after {
+    left: 20px;
   }
 }
 
