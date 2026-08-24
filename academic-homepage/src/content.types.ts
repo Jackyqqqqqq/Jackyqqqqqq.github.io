@@ -8,6 +8,8 @@ export interface SiteUiContent {
   result: LocalizedText;
   repository: LocalizedText;
   email: LocalizedText;
+  emailEdu: LocalizedText;
+  wechat: LocalizedText;
   github: LocalizedText;
   menu: LocalizedText;
   skipToContent: LocalizedText;
@@ -39,7 +41,7 @@ export interface SkillNode {
 
 export interface SiteContent {
   identity: { name: LocalizedText; role: LocalizedText; location: LocalizedText };
-  contact: { email: string; github: string };
+  contact: { email: string; emailEdu: string; wechat: string; github: string };
   navigation: Array<{ id: string; label: LocalizedText }>;
   about: LocalizedText[];
   research: Array<{ title: LocalizedText; description: LocalizedText; intensity: number }>;
