@@ -207,6 +207,7 @@ button {
   backdrop-filter: blur(12px) saturate(120%);
   -webkit-backdrop-filter: blur(12px) saturate(120%);
   transition: background-color 220ms ease, color 220ms ease;
+  position: relative;
 }
 
 .site-header-inner {
@@ -664,6 +665,16 @@ button {
   max-width: 68ch;
 }
 
+/* The About section spans the full content column — its paragraphs are short,
+   so the usual 68ch measure leaves an empty right gutter. */
+#about .prose {
+  max-width: none;
+}
+
+#about .prose p {
+  max-width: 96ch;
+}
+
 .prose p {
   margin: 0;
   font-size: 1rem;
@@ -1050,6 +1061,8 @@ button {
   font-size: 0.78rem;
 }
 
+/* ---- margin notes removed ---- */
+
 /* ---- education emblem cards ---- */
 .education-list {
   display: grid;
@@ -1121,6 +1134,22 @@ button {
 
 .education-details:focus {
   outline: none;
+}
+
+.education-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.education-heading time {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .education-school {
