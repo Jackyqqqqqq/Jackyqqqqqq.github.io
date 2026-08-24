@@ -587,16 +587,6 @@ button {
   line-height: 1.65;
 }
 
-.profile-identity .profile-altname {
-  margin: 7px 0 0;
-  color: var(--accent);
-  font-family: var(--mono), "Noto Serif SC Variable", "Songti SC", serif;
-  font-size: 0.6875rem;
-  letter-spacing: 0.18em;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
 .profile-contact {
   display: grid;
   gap: 4px;
