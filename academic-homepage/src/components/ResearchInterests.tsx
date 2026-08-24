@@ -10,40 +10,35 @@ interface ResearchInterestsProps {
 /* staggered cord lengths so the bulbs hang at different heights */
 const CORD_LENGTHS = [34, 62, 26, 52];
 
-function Bulb({ glow }: { glow: number }) {
+function Bulb() {
   return (
-    <svg
-      className="bulb"
-      viewBox="0 0 64 100"
-      aria-hidden="true"
-      style={{ "--glow": glow } as CSSProperties}
-    >
-      {/* light rays, visible in proportion to the glow */}
-      <g className="bulb-rays" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-        <line x1="32" y1="2" x2="32" y2="10" />
-        <line x1="8" y1="14" x2="14" y2="20" />
-        <line x1="56" y1="14" x2="50" y2="20" />
-        <line x1="2" y1="38" x2="10" y2="38" />
-        <line x1="62" y1="38" x2="54" y2="38" />
-      </g>
-      {/* glass envelope */}
+    <svg className="bulb" viewBox="0 0 64 100" aria-hidden="true">
+      {/* screw base at the top, where the cord attaches */}
+      <path className="bulb-base" d="M29 6 L35 6 L32 0 Z" />
+      <rect className="bulb-base" x="26.5" y="6" width="11" height="5" rx="1.5" />
+      <rect className="bulb-base" x="25" y="12.5" width="14" height="5" rx="1.5" />
+      {/* glass envelope, wide end at the bottom */}
       <path
         className="bulb-glass"
-        d="M32 12 C19 12 10 22 10 35 C10 44 14 50 19 56 C23 61 25 64 25 69 L39 69 C39 64 41 61 45 56 C50 50 54 44 54 35 C54 22 45 12 32 12 Z"
+        d="M25 18.5 L39 18.5 C39 23 41 26 45 31 C50 37 54 43 54 52 C54 65 45 75 32 75 C19 75 10 65 10 52 C10 43 14 37 19 31 C23 26 25 23 25 18.5 Z"
       />
       {/* filament */}
       <path
         className="bulb-filament"
-        d="M24 52 L28 40 L32 50 L36 40 L40 52"
+        d="M24 44 L28 56 L32 46 L36 56 L40 44"
         fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      {/* screw base */}
-      <rect className="bulb-base" x="25" y="69" width="14" height="5" rx="1.5" />
-      <rect className="bulb-base" x="26.5" y="75.5" width="11" height="5" rx="1.5" />
-      <path className="bulb-base" d="M29 82 L35 82 L32 88 Z" />
+      {/* light rays around the wide bottom */}
+      <g className="bulb-rays" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+        <line x1="32" y1="84" x2="32" y2="92" />
+        <line x1="8" y1="70" x2="14" y2="64" />
+        <line x1="56" y1="70" x2="50" y2="64" />
+        <line x1="2" y1="48" x2="10" y2="48" />
+        <line x1="62" y1="48" x2="54" y2="48" />
+      </g>
     </svg>
   );
 }
@@ -60,7 +55,7 @@ export default function ResearchInterests({ locale }: ResearchInterestsProps) {
             style={{ "--glow": interest.intensity } as CSSProperties}
           >
             <span className="bulb-cord" aria-hidden="true" style={{ height: CORD_LENGTHS[index % CORD_LENGTHS.length] }} />
-            <Bulb glow={interest.intensity} />
+            <Bulb />
             <h3>{pick(interest.title, locale)}</h3>
             <p>{pick(interest.description, locale)}</p>
           </li>
