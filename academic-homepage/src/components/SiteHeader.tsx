@@ -3,6 +3,7 @@ import DisplaySettings from "./DisplaySettings";
 import { siteContent } from "../content";
 import type { Locale } from "../content.types";
 import { pick } from "../i18n";
+import { useReadingProgress } from "../hooks/useReadingProgress";
 
 interface SiteHeaderProps {
   locale: Locale;
@@ -16,6 +17,7 @@ export default function SiteHeader({
   activeSection
 }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const progress = useReadingProgress();
 
   return (
     <header className="site-header">
@@ -73,6 +75,11 @@ export default function SiteHeader({
           <DisplaySettings locale={locale} />
         </div>
       </div>
+      <div
+        className="reading-progress"
+        aria-hidden="true"
+        style={{ transform: `scaleX(${progress})` }}
+      />
     </header>
   );
 }

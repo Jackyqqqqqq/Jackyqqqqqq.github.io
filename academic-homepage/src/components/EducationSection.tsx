@@ -13,29 +13,27 @@ export default function EducationSection({ locale }: EducationSectionProps) {
       <ol className="education-list">
         {siteContent.education.map((entry) => (
           <li key={`${entry.institution.en}-${entry.period}`}>
-            <article>
-              <div className="education-logo-frame">
-                <img
-                  alt={pick(entry.logoAlt, locale)}
-                  className="education-logo"
-                  height="44"
-                  src={entry.logo}
-                  width="44"
-                />
+            <div className="education-node">
+              <img
+                alt={pick(entry.logoAlt, locale)}
+                className="education-logo"
+                height="44"
+                src={entry.logo}
+                width="44"
+              />
+            </div>
+            <article className="education-card">
+              <div className="education-heading">
+                <h3>{pick(entry.institution, locale)}</h3>
+                <time>{entry.period}</time>
               </div>
-              <div className="education-body">
-                <div className="education-heading">
-                  <h3>{pick(entry.institution, locale)}</h3>
-                  <time>{entry.period}</time>
-                </div>
-                <p>{pick(entry.school, locale)}</p>
-                <p>{pick(entry.degree, locale)}</p>
-                <ul>
-                  {entry.details.map((detail) => (
-                    <li key={detail.en}>{pick(detail, locale)}</li>
-                  ))}
-                </ul>
-              </div>
+              <p className="education-school">{pick(entry.school, locale)}</p>
+              <p className="education-degree">{pick(entry.degree, locale)}</p>
+              <ul>
+                {entry.details.map((detail) => (
+                  <li key={detail.en}>{pick(detail, locale)}</li>
+                ))}
+              </ul>
             </article>
           </li>
         ))}
