@@ -31,6 +31,7 @@ export default function ProfileAside({ locale }: ProfileAsideProps) {
       <address className="profile-contact">
         <span>{pick(siteContent.identity.location, locale)}</span>
         <a href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</a>
+        <a href={`mailto:${siteContent.contact.emailEdu}`}>{siteContent.contact.emailEdu}</a>
         <a href={siteContent.contact.github} target="_blank" rel="noreferrer">
           {pick(siteContent.ui.github, locale)}
         </a>
