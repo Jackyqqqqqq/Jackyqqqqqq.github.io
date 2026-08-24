@@ -696,7 +696,7 @@ button {
   align-items: flex-start;
   gap: clamp(18px, 3vw, 34px);
   margin: 8px 0 0;
-  padding: 26px 4px 0;
+  padding: 0 4px;
   border-top: 2px solid var(--line-strong);
   list-style: none;
 }
@@ -782,6 +782,22 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 26px 18px;
   }
+}
+
+.education-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.education-heading time {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .project-fan {
@@ -1034,50 +1050,12 @@ button {
   font-size: 0.78rem;
 }
 
-/* ---- margin notes (Tufte sidenotes) ---- */
-#about {
-  position: relative;
-}
-
-.margin-notes {
-  position: absolute;
-  top: 76px;
-  left: calc(100% + 28px);
-  width: 178px;
-  padding-left: 14px;
-  border-left: 1px solid var(--line);
-}
-
-.margin-note {
-  margin: 0 0 14px;
-  color: var(--muted);
-  font-size: 0.72rem;
-  line-height: 1.6;
-  overflow-wrap: break-word;
-}
-
-.margin-note-label {
-  display: block;
-  margin-bottom: 2px;
-  color: var(--navy);
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.margin-note a {
-  color: var(--link);
-  text-decoration: none;
-}
-
 /* ---- education emblem cards ---- */
 .education-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(20px, 4vw, 44px);
-  margin: 12px 0 0;
+  margin: 16px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -1087,7 +1065,6 @@ button {
 }
 
 .education-cover-heading {
-  height: 100%;
   margin: 0;
   font: inherit;
 }
@@ -1096,53 +1073,33 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
-  height: 100%;
   margin: 0;
-  padding: 30px 22px 24px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface-raised);
+  padding: 8px 6px;
+  border: 0;
+  background: transparent;
   color: inherit;
   text-align: center;
   cursor: pointer;
-  transition: transform 260ms cubic-bezier(0.2, 0.72, 0.2, 1), border-color 220ms ease, box-shadow 260ms ease;
+  transition: transform 260ms cubic-bezier(0.2, 0.72, 0.2, 1);
 }
 
 .education-cover:hover,
 .education-cover:focus-visible {
-  border-color: var(--accent);
-  box-shadow: 0 16px 32px -18px rgb(20 33 41 / 0.35);
-  transform: scale(1.045);
-}
-
-.education-list > li[data-open] .education-cover {
-  border-color: var(--accent);
-  box-shadow: 0 16px 32px -18px rgb(20 33 41 / 0.3);
-}
-
-.education-emblem {
-  display: grid;
-  width: 118px;
-  height: 118px;
-  place-items: center;
-  border: 1px solid var(--line-strong);
-  border-radius: 50%;
-  background: var(--paper);
-  box-shadow: 0 3px 10px rgb(20 33 41 / 0.1);
+  transform: scale(1.05);
 }
 
 .education-logo {
   display: block;
-  width: 92px;
-  height: 92px;
+  width: 112px;
+  height: 112px;
   object-fit: contain;
-  filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--ink) 10%, transparent));
+  filter: drop-shadow(0 3px 8px rgb(20 33 41 / 0.14));
 }
 
 .education-badge {
-  margin-top: 4px;
+  margin-top: 8px;
   color: var(--navy);
   font-family: var(--serif);
   font-size: 1.125rem;
@@ -1156,33 +1113,14 @@ button {
 }
 
 .education-details {
-  margin-top: 18px;
-  padding: 20px 24px 22px;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--accent);
-  border-radius: var(--radius);
-  background: var(--surface-raised);
+  margin-top: 16px;
+  padding: 16px 4px 4px 20px;
+  border-left: 2px solid var(--accent);
   animation: details-in 320ms cubic-bezier(0.2, 0.72, 0.2, 1) both;
 }
 
 .education-details:focus {
   outline: none;
-}
-
-.education-heading {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: baseline;
-  gap: 18px;
-}
-
-.education-heading time {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.02em;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
 }
 
 .education-school {
@@ -1363,15 +1301,11 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
   gap: clamp(28px, 4vw, 52px);
-  align-items: start;
+  align-items: center;
 }
 
 .ongoing-card {
-  margin-top: 12px;
-  padding: 20px 20px 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface-raised);
+  padding: 0;
 }
 
 .ongoing-card h3 {
@@ -1385,7 +1319,7 @@ button {
 .ongoing-paper {
   padding: 10px 8px;
   border: 1px solid var(--line-strong);
-  border-radius: 2px;
+  border-radius: 8px;
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--accent-light) 6%, transparent), transparent 60%),
     var(--paper);
@@ -1470,26 +1404,10 @@ button {
 }
 
 /* ---- responsive adjustments for new components ---- */
-@media (max-width: 1280px) {
-  .margin-notes {
-    display: none;
-  }
-}
-
 @media (max-width: 640px) {
   .education-list {
     grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
-  }
-
-  .education-emblem {
-    width: 96px;
-    height: 96px;
-  }
-
-  .education-logo {
-    width: 74px;
-    height: 74px;
+    gap: 20px;
   }
 
   .education-heading {
@@ -1755,17 +1673,7 @@ button {
 
   .education-list {
     grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
-  }
-
-  .education-emblem {
-    width: 96px;
-    height: 96px;
-  }
-
-  .education-logo {
-    width: 74px;
-    height: 74px;
+    gap: 20px;
   }
 
   .education-heading {
