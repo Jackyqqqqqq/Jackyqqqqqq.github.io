@@ -7,6 +7,8 @@ const REQUIRED_UI_KEYS: Array<keyof SiteContent["ui"]> = [
   "result",
   "repository",
   "email",
+  "emailEdu",
+  "wechat",
   "github",
   "menu",
   "skipToContent",
@@ -50,6 +52,7 @@ export function validateContent(content: SiteContent): string[] {
     if (new Set(values).size !== values.length) errors.push(`${label} IDs must be unique`);
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(content.contact.email)) errors.push("contact.email is invalid");
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(content.contact.emailEdu)) errors.push("contact.emailEdu is invalid");
   if (!isHttpsUrl(content.contact.github)) errors.push("contact.github must use https");
   for (const project of content.projects) if (project.href && !isHttpsUrl(project.href)) errors.push(`projects.${project.id}.href must use https`);
   for (const key of REQUIRED_UI_KEYS) if (!content.ui[key]) errors.push(`content.ui.${key} is missing`);
