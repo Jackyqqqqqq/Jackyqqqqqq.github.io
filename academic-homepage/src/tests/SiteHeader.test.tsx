@@ -32,7 +32,7 @@ test("renders semantic links for every homepage section", () => {
   expect(screen.getByRole("link", { name: "关于我" })).toHaveAttribute("href", "#about");
   expect(screen.getByRole("link", { name: "研究兴趣" })).toHaveAttribute("href", "#research");
   expect(screen.getByRole("link", { name: "项目经历" })).toHaveAttribute("href", "#projects");
-  expect(screen.getByRole("link", { name: "教育经历" })).toHaveAttribute("href", "#education");
+  expect(screen.getByRole("link", { name: "教育与实习" })).toHaveAttribute("href", "#education");
   expect(screen.getByRole("link", { name: "技能" })).toHaveAttribute("href", "#skills");
   expect(screen.getByRole("link", { name: "联系方式" })).toHaveAttribute("href", "#contact");
   expect(screen.getByRole("link", { name: "关于我" })).toHaveAttribute("aria-current", "location");

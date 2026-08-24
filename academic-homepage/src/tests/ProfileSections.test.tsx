@@ -30,7 +30,7 @@ test("renders the public academic record without private resume fields", () => {
 
   expect(screen.getByRole("heading", { name: "About" })).toBeVisible();
   expect(screen.getByRole("heading", { name: "Research Preference" })).toBeVisible();
-  expect(screen.getByRole("heading", { name: "Education" })).toBeVisible();
+  expect(screen.getByRole("heading", { name: "Education & Experience" })).toBeVisible();
   expect(screen.getByRole("heading", { name: "Skills" })).toBeVisible();
   expect(screen.getByRole("heading", { name: "Contact" })).toBeVisible();
   expect(screen.getByRole("img", { name: "Zhejiang University emblem" })).toHaveAttribute(
@@ -58,6 +58,11 @@ test("expands an education emblem to reveal the detailed record", () => {
   expect(screen.getByText(/Verification and Testing of Encryption for In-Vehicle Networks/)).toBeVisible();
   expect(screen.getByText("School of Cyber Science and Engineering")).toBeVisible();
 
+  // Stays open until clicked again — Escape or clicking elsewhere must not close it.
   fireEvent.keyDown(window, { key: "Escape" });
+  fireEvent.click(document.body);
+  expect(bachelor).toHaveAttribute("aria-expanded", "true");
+
+  fireEvent.click(bachelor);
   expect(bachelor).toHaveAttribute("aria-expanded", "false");
 });
