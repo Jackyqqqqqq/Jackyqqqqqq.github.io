@@ -41,9 +41,23 @@ test("renders the public academic record without private resume fields", () => {
     "src",
     "/university-logos/wuhan-university.svg"
   );
-  expect(screen.getByText(/Verification and Testing of Encryption for In-Vehicle Networks/)).toBeVisible();
   expect(container.textContent).not.toMatch(/\b1[3-9]\d{9}\b/);
   expect(container.textContent).not.toMatch(
     /\b(?:19|20)\d{2}[./-](?:0[1-9]|1[0-2])[./-](?:0[1-9]|[12]\d|3[01])\b/
   );
+});
+
+test("expands an education emblem to reveal the detailed record", () => {
+  render(<App />);
+
+  const bachelor = screen.getByRole("button", { name: /Bachelor's Degree/ });
+  expect(bachelor).toHaveAttribute("aria-expanded", "false");
+
+  fireEvent.click(bachelor);
+  expect(bachelor).toHaveAttribute("aria-expanded", "true");
+  expect(screen.getByText(/Verification and Testing of Encryption for In-Vehicle Networks/)).toBeVisible();
+  expect(screen.getByText("School of Cyber Science and Engineering")).toBeVisible();
+
+  fireEvent.keyDown(window, { key: "Escape" });
+  expect(bachelor).toHaveAttribute("aria-expanded", "false");
 });
