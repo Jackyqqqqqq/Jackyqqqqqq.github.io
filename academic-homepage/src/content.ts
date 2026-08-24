@@ -25,11 +25,47 @@ export const siteContent: SiteContent = {
     { institution: { zh: "浙江大学", en: "Zhejiang University" }, school: { zh: "软件学院", en: "School of Software Technology" }, degree: { zh: "软件工程 · 工学硕士", en: "MEng in Software Engineering" }, period: "2026.09-2029.06", logo: "/university-logos/zhejiang-university.svg", logoAlt: { zh: "浙江大学校徽", en: "Zhejiang University emblem" }, details: [{ zh: "2026 级硕士研究生", en: "Entering Class of 2026" }] },
     { institution: { zh: "武汉大学", en: "Wuhan University" }, school: { zh: "国家网络安全学院", en: "School of Cyber Science and Engineering" }, degree: { zh: "网络空间安全 · 工学学士", en: "BEng in Cyberspace Security" }, period: "2022.09-2026.06", logo: "/university-logos/wuhan-university.svg", logoAlt: { zh: "武汉大学校徽", en: "Wuhan University emblem" }, details: [{ zh: "毕业论文：《车载网络安全加密技术验证与测试》", en: "Thesis: Verification and Testing of Encryption for In-Vehicle Networks" }, { zh: "国家级大学生创新训练项目", en: "National Undergraduate Innovation Training Program" }] }
   ],
-  skills: [
-    { label: { zh: "编程", en: "Programming" }, items: ["Python", "C++", "SQL"] },
-    { label: { zh: "机器学习", en: "Machine Learning" }, items: ["Deep Learning", "NLP", "Computer Vision", "ResNet18"] },
-    { label: { zh: "安全与数据", en: "Security and Data" }, items: ["Information Hiding", "Content Security", "Databases"] }
-  ],
+  skills: {
+    name: { zh: "技能", en: "Skills" },
+    children: [
+      {
+        name: { zh: "编程语言", en: "Languages" },
+        children: [
+          { name: { zh: "Python", en: "Python" } },
+          { name: { zh: "C++", en: "C++" } },
+          { name: { zh: "SQL", en: "SQL" } }
+        ]
+      },
+      {
+        name: { zh: "机器学习", en: "Machine Learning" },
+        children: [
+          { name: { zh: "深度学习", en: "Deep Learning" } },
+          {
+            name: { zh: "方向", en: "Domains" },
+            children: [
+              { name: { zh: "计算机视觉", en: "Computer Vision" } },
+              { name: { zh: "自然语言处理", en: "NLP" } }
+            ]
+          },
+          {
+            name: { zh: "方法与架构", en: "Methods" },
+            children: [
+              { name: { zh: "ResNet18", en: "ResNet18" } },
+              { name: { zh: "半监督学习", en: "Semi-supervised" } }
+            ]
+          }
+        ]
+      },
+      {
+        name: { zh: "安全与数据", en: "Security & Data" },
+        children: [
+          { name: { zh: "信息隐藏", en: "Information Hiding" } },
+          { name: { zh: "内容安全", en: "Content Security" } },
+          { name: { zh: "数据库", en: "Databases" } }
+        ]
+      }
+    ]
+  },
   ui: {
     expand: { zh: "展开详情", en: "Show details" },
     collapse: { zh: "收起详情", en: "Hide details" },
@@ -44,7 +80,7 @@ export const siteContent: SiteContent = {
     appearance: { zh: "外观", en: "Appearance" },
     appearanceAuto: { zh: "自动", en: "Auto" },
     appearanceBright: { zh: "明亮", en: "Bright" },
-    appearanceSoft: { zh: "柔和", en: "Soft" },
+    appearanceSoft: { zh: "羊皮纸", en: "Parchment" },
     appearanceDark: { zh: "深色", en: "Dark" },
     accentColor: { zh: "主题色", en: "Accent color" },
     accentNavy: { zh: "藏青", en: "Navy" },

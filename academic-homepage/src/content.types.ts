@@ -1,6 +1,10 @@
 export type Locale = "zh" | "en";
 export type LocalizedText = Record<Locale, string>;
 export interface ProjectContent { id: string; title: LocalizedText; period: string; tags: string[]; summary: LocalizedText; method: LocalizedText; result: LocalizedText; href?: string; }
+export interface SkillNode {
+  name: LocalizedText;
+  children?: SkillNode[];
+}
 export interface SiteUiContent {
   expand: LocalizedText;
   collapse: LocalizedText;
@@ -33,6 +37,6 @@ export interface SiteContent {
   research: Array<{ title: LocalizedText; description: LocalizedText }>;
   projects: ProjectContent[];
   education: Array<{ institution: LocalizedText; school: LocalizedText; degree: LocalizedText; period: string; logo: string; logoAlt: LocalizedText; details: LocalizedText[] }>;
-  skills: Array<{ label: LocalizedText; items: string[] }>;
+  skills: SkillNode;
   ui: SiteUiContent;
 }

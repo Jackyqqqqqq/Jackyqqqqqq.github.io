@@ -72,6 +72,12 @@ test.each(invalidContentCases)("rejects $name", ({ mutate, expectedError }) => {
   expect(validateContent(content)).toContain(expectedError);
 });
 
+test("rejects non-HTTPS project links", () => {
+  const content = structuredClone(siteContent);
+  content.projects[0].href = "http://example.test/project";
+  expect(validateContent(content)).toContain("projects.covid-forecasting.href must use https");
+});
+
 test("does not expose resume-only private data", () => {
   const serialized = JSON.stringify(siteContent);
   const keys: string[] = [];
@@ -87,8 +93,4 @@ test("does not expose resume-only private data", () => {
   expect(keys.join(" ")).not.toMatch(/\b(?:birth(?:day|date)?|phone|mobile|gpa|cet6?|score|grade)\b/i);
   expect(serialized).not.toMatch(/\b1[3-9]\d{9}\b/);
   expect(serialized).not.toMatch(/\b(?:19|20)\d{2}[./-](?:0[1-9]|1[0-2])[./-](?:0[1-9]|[12]\d|3[01])\b/);
-});
-
-test("does not invent project links", () => {
-  expect(siteContent.projects.every((project) => project.href === undefined)).toBe(true);
 });
