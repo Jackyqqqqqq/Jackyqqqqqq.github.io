@@ -49,12 +49,13 @@ describe("locale preferences", () => {
     expect(document.title).toContain("Qin Yizhen");
     expect(document.head.querySelector('meta[name="description"]')).toHaveAttribute(
       "content",
-      expect.stringContaining("MSc")
+      expect.stringContaining("MEng")
     );
   });
 
   test("persists an explicit language change", async () => {
     const user = userEvent.setup();
+
     render(<LocaleHarness />);
 
     await user.click(screen.getByRole("button", { name: "English" }));

@@ -10,10 +10,6 @@ interface ProfileAsideProps {
 export default function ProfileAside({ locale }: ProfileAsideProps) {
   const [portraitFailed, setPortraitFailed] = useState(false);
   const name = pick(siteContent.identity.name, locale);
-  const alternateName = pick(
-    siteContent.identity.name,
-    locale === "zh" ? "en" : "zh"
-  );
 
   return (
     <aside className="profile-aside reveal">
@@ -29,7 +25,6 @@ export default function ProfileAside({ locale }: ProfileAsideProps) {
 
       <div className="profile-identity">
         <h1>{name}</h1>
-        <p className="profile-altname">{alternateName}</p>
         <p>{pick(siteContent.identity.role, locale)}</p>
       </div>
 

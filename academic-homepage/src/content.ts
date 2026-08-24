@@ -1,14 +1,14 @@
 import type { SiteContent } from "./content.types";
 
 export const siteContent: SiteContent = {
-  identity: { name: { zh: "秦翊祯", en: "Qin Yizhen" }, role: { zh: "浙江大学软件学院 2026 级软件工程硕士研究生", en: "MSc Student in Software Engineering, Zhejiang University, 2026 Cohort" }, location: { zh: "中国杭州", en: "Hangzhou, China" } },
+  identity: { name: { zh: "秦翊祯", en: "Qin Yizhen" }, role: { zh: "浙江大学软件学院 2026 级软件工程硕士研究生", en: "Incoming MEng Student in Software Engineering, Zhejiang University" }, location: { zh: "中国杭州", en: "Hangzhou, China" } },
   contact: { email: "qinyizhen8@gmail.com", github: "https://github.com/Jackyqqqqqq" },
   navigation: [
     ["about", "关于我", "About"], ["research", "研究兴趣", "Research"], ["projects", "项目经历", "Projects"], ["education", "教育经历", "Education"], ["skills", "技能", "Skills"], ["contact", "联系方式", "Contact"]
   ].map(([id, zh, en]) => ({ id, label: { zh, en } })),
   about: [
-    { zh: "我将于 2026 年进入浙江大学软件学院攻读软件工程硕士学位，本科毕业于武汉大学国家网络安全学院网络空间安全专业。", en: "I will begin an MSc in Software Engineering at Zhejiang University in 2026, after completing a BSc in Cyberspace Security at Wuhan University." },
-    { zh: "我的研究兴趣位于人工智能、软件工程与网络安全的交叉领域，关注可复现的机器学习实验、可信软件系统与隐私保护。", en: "My interests lie at the intersection of artificial intelligence, software engineering, and cyber security, with a focus on reproducible machine-learning experiments, trustworthy systems, and privacy." }
+    { zh: "我将于 2026 年秋季进入浙江大学软件学院攻读软件工程专业工学硕士学位；本科就读于武汉大学国家网络安全学院网络空间安全专业，获工学学士学位。", en: "I will begin an MEng in Software Engineering at the School of Software Technology, Zhejiang University, in fall 2026. I earned my BEng in Cyberspace Security at the School of Cyber Science and Engineering, Wuhan University." },
+    { zh: "我的研究兴趣位于人工智能、软件工程与网络安全的交叉领域，关注可复现的机器学习实验、可信软件系统与隐私保护。", en: "My research interests lie at the intersection of artificial intelligence, software engineering, and cybersecurity, with a focus on reproducible machine-learning experiments, trustworthy software systems, and privacy protection." }
   ],
   research: [
     ["人工智能与深度学习", "AI and Deep Learning", "从模型复现到实验验证", "From model reproduction to experimental validation"],
@@ -22,7 +22,7 @@ export const siteContent: SiteContent = {
     { id: "hinet-steganography", title: { zh: "HiNet 图像隐写研究", en: "HiNet Image Steganography Study" }, period: "2025.01-2025.06", tags: ["Deep Learning", "Steganography", "Privacy"], summary: { zh: "复现可逆神经网络的图像隐藏与恢复。", en: "Reproduced image hiding and recovery with an invertible network." }, method: { zh: "加入 DataEncoder 与 DataDecoder 以支持二进制载荷。", en: "Added DataEncoder and DataDecoder for binary payloads." }, result: { zh: "扩展到二进制数据的隐私传输。", en: "Extended the method to private binary-data transmission." } }
   ],
   education: [
-    { institution: { zh: "浙江大学", en: "Zhejiang University" }, school: { zh: "软件学院", en: "School of Software Technology" }, degree: { zh: "软件工程 · 工学硕士", en: "MEng in Software Engineering" }, period: "2026.09-2029.06", logo: "/university-logos/zhejiang-university.svg", logoAlt: { zh: "浙江大学校徽", en: "Zhejiang University emblem" }, details: [{ zh: "2026 级硕士研究生", en: "2026 Cohort" }] },
+    { institution: { zh: "浙江大学", en: "Zhejiang University" }, school: { zh: "软件学院", en: "School of Software Technology" }, degree: { zh: "软件工程 · 工学硕士", en: "MEng in Software Engineering" }, period: "2026.09-2029.06", logo: "/university-logos/zhejiang-university.svg", logoAlt: { zh: "浙江大学校徽", en: "Zhejiang University emblem" }, details: [{ zh: "2026 级硕士研究生", en: "Entering Class of 2026" }] },
     { institution: { zh: "武汉大学", en: "Wuhan University" }, school: { zh: "国家网络安全学院", en: "School of Cyber Science and Engineering" }, degree: { zh: "网络空间安全 · 工学学士", en: "BEng in Cyberspace Security" }, period: "2022.09-2026.06", logo: "/university-logos/wuhan-university.svg", logoAlt: { zh: "武汉大学校徽", en: "Wuhan University emblem" }, details: [{ zh: "毕业论文：《车载网络安全加密技术验证与测试》", en: "Thesis: Verification and Testing of Encryption for In-Vehicle Networks" }, { zh: "国家级大学生创新训练项目", en: "National Undergraduate Innovation Training Program" }] }
   ],
   skills: [
