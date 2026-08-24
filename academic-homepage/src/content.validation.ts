@@ -22,7 +22,12 @@ const REQUIRED_UI_KEYS: Array<keyof SiteContent["ui"]> = [
   "accentBurgundy",
   "accentViolet",
   "fontSize",
-  "resetDisplay"
+  "resetDisplay",
+  "ongoingTitle",
+  "ongoingNote",
+  "skillOwned",
+  "skillLearning",
+  "skillPlanned"
 ];
 
 function isHttpsUrl(value: string): boolean {
