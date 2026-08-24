@@ -2,7 +2,7 @@ import type { SiteContent } from "./content.types";
 
 export const siteContent: SiteContent = {
   identity: { name: { zh: "秦翊祯", en: "Qin Yizhen" }, role: { zh: "浙江大学软件学院 2026 级软件工程硕士研究生", en: "Incoming MEng Student in Software Engineering, Zhejiang University" }, location: { zh: "中国杭州", en: "Hangzhou, China" } },
-  contact: { email: "qinyizhen8@gmail.com", github: "https://github.com/Jackyqqqqqq" },
+  contact: { email: "qinyizhen8@gmail.com", emailEdu: "qinyizhen@zju.edu.cn", wechat: "Jackyqqqqqq", github: "https://github.com/Jackyqqqqqq" },
   navigation: [
     ["about", "关于我", "About"], ["research", "研究兴趣", "Research Preference"], ["projects", "项目经历", "Projects"], ["education", "教育与实习", "Education & Experience"], ["skills", "技能", "Skills"], ["contact", "联系方式", "Contact"]
   ].map(([id, zh, en]) => ({ id, label: { zh, en } })),
@@ -63,6 +63,8 @@ export const siteContent: SiteContent = {
     result: { zh: "结果", en: "Result" },
     repository: { zh: "项目仓库", en: "Repository" },
     email: { zh: "邮箱", en: "Email" },
+    emailEdu: { zh: "教育邮箱", en: "Academic Email" },
+    wechat: { zh: "微信", en: "WeChat" },
     github: { zh: "GitHub", en: "GitHub" },
     menu: { zh: "菜单", en: "Menu" },
     skipToContent: { zh: "跳到主要内容", en: "Skip to content" },

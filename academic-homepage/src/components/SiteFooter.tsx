@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import { siteContent } from "../content";
 import type { Locale } from "../content.types";
 import { pick } from "../i18n";
@@ -12,7 +13,7 @@ interface Channel {
   label: string;
   value: string;
   href?: string;
-  icon: JSX.Element;
+  icon: ReactNode;
 }
 
 const ICON_PROPS = {
@@ -133,6 +134,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
         {channels.map((channel) => {
           const isOpen = openId === channel.id;
           const panelId = `contact-${channel.id}-panel`;
+          const label = channel.label;
           return (
             <div className="contact-channel" key={channel.id} data-open={isOpen ? "true" : undefined}>
               <button
@@ -140,14 +142,14 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                 className="contact-icon"
                 aria-expanded={isOpen}
                 aria-controls={panelId}
-                aria-label={channel.label}
-                title={channel.label}
+                aria-label={label}
+                title={label}
                 onClick={() => setOpenId(isOpen ? null : channel.id)}
               >
                 {channel.icon}
               </button>
-              <div className="contact-popover" id={panelId} hidden={!isOpen} role="group" aria-label={channel.label}>
-                <span className="contact-popover-label">{channel.label}</span>
+              <div className="contact-popover" id={panelId} hidden={!isOpen} role="group" aria-label={label}>
+                <span className="contact-popover-label">{label}</span>
                 {channel.href ? (
                   <a
                     href={channel.href}
