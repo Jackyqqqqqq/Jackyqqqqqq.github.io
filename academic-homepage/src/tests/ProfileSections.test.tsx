@@ -29,12 +29,10 @@ test("renders the public academic record without private resume fields", () => {
   const { container } = render(<App />);
 
   expect(screen.getByRole("heading", { name: "About" })).toBeVisible();
-  expect(screen.getByRole("heading", { name: "Research" })).toBeVisible();
+  expect(screen.getByRole("heading", { name: "Research Preference" })).toBeVisible();
   expect(screen.getByRole("heading", { name: "Education" })).toBeVisible();
   expect(screen.getByRole("heading", { name: "Skills" })).toBeVisible();
   expect(screen.getByRole("heading", { name: "Contact" })).toBeVisible();
-  expect(screen.getByText("Wuhan University")).toBeVisible();
-  expect(screen.getByText(/Verification and Testing of Encryption for In-Vehicle Networks/)).toBeVisible();
   expect(screen.getByRole("img", { name: "Zhejiang University emblem" })).toHaveAttribute(
     "src",
     "/university-logos/zhejiang-university.svg"
@@ -47,4 +45,19 @@ test("renders the public academic record without private resume fields", () => {
   expect(container.textContent).not.toMatch(
     /\b(?:19|20)\d{2}[./-](?:0[1-9]|1[0-2])[./-](?:0[1-9]|[12]\d|3[01])\b/
   );
+});
+
+test("expands an education emblem card to reveal the detailed record", () => {
+  render(<App />);
+
+  const bachelor = screen.getByRole("button", { name: /Bachelor's Degree/ });
+  expect(bachelor).toHaveAttribute("aria-expanded", "false");
+
+  fireEvent.click(bachelor);
+  expect(bachelor).toHaveAttribute("aria-expanded", "true");
+  expect(screen.getByText(/Verification and Testing of Encryption for In-Vehicle Networks/)).toBeVisible();
+  expect(screen.getByText("School of Cyber Science and Engineering")).toBeVisible();
+
+  fireEvent.keyDown(window, { key: "Escape" });
+  expect(bachelor).toHaveAttribute("aria-expanded", "false");
 });
