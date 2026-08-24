@@ -59,6 +59,7 @@ export default function SiteHeader({
           <div className="locale-switch" aria-label="Language">
             <button
               type="button"
+              lang="zh"
               aria-pressed={locale === "zh"}
               onClick={() => onLocaleChange("zh")}
             >
@@ -66,6 +67,7 @@ export default function SiteHeader({
             </button>
             <button
               type="button"
+              lang="en"
               aria-pressed={locale === "en"}
               onClick={() => onLocaleChange("en")}
             >
