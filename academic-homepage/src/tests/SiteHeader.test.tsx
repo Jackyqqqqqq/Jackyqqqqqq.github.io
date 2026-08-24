@@ -70,7 +70,7 @@ test("opens display settings and persists appearance choices", async () => {
   expect(trigger).toHaveAttribute("aria-expanded", "true");
   expect(screen.getByRole("dialog", { name: "显示设置" })).toBeVisible();
 
-  await user.click(screen.getByRole("button", { name: "柔和" }));
+  await user.click(screen.getByRole("button", { name: "羊皮纸" }));
   expect(document.documentElement).toHaveAttribute("data-appearance", "soft");
 
   await user.click(screen.getByRole("button", { name: "墨绿" }));
